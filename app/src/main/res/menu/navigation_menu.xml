@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/shopping"
+        android:icon="@drawable/ic_shopping"
+        android:title="Shopping" />
+
+    <item
+        android:id="@+id/sourceCode"
+        android:icon="@drawable/ic_github"
+        android:title="Soruce Code" />
+
+    <item
+        android:id="@+id/webSite"
+        android:icon="@drawable/logo_walmart"
+        android:title="Walmart" />
+</menu>

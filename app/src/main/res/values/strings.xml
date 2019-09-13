@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WalmartProducts</string>
+    <plurals name="reviews">
+        <item quantity="one">&lt;u>%d review&lt;/u></item>
+        <item quantity="few">&lt;u>%d reviews&lt;/u></item>
+        <item quantity="other">&lt;u>reviews&lt;/u></item>
+    </plurals>
+</resources>

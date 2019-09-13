@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.andymariscal.walmartproducts"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "URL_BASE", "\"https://mobile-tha-server.firebaseapp.com\"")
+        }
+
+        debug {
+            buildConfigField("String", "URL_BASE", "\"https://mobile-tha-server.firebaseapp.com\"")
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    //region Dagger 2
+    //https://dagger.dev/android
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.dagger"
+    kapt "com.google.dagger:dagger-android-processor:$rootProject.dagger"
+    //endregion
+
+    //region Retrofit
+    // https://square.github.io/retrofit/
+    // https://github.com/square/retrofit/tree/master/retrofit-adapters/rxjava2
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit"
+    implementation "com.google.code.gson:gson:$rootProject.gson"
+    //endregion
+
+    //region RxJava/RxKotlin/RxAndroid
+    // https://github.com/ReactiveX/RxKotlin
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlin"
+    // https://github.com/ReactiveX/RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+    //endregion
+
+    //region OkHttp
+    // https://square.github.io/okhttp/
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp"
+    //endregion
+
+    //region Timber
+    // https://github.com/JakeWharton/timber
+    implementation "com.jakewharton.timber:timber:$rootProject.timber"
+    //endregion
+
+    //region Navigation Component
+    // https://developer.android.com/jetpack/androidx/releases/navigation#2.1.0
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+    //endregion
+
+    //region Glide
+    // https://github.com/bumptech/glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+    //endregion
+
+
+    //region Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlinVersion"
+    //endregion
+
+    //region Android X
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.legacySupportV4Version"
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
+    androidTestImplementation "androidx.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    //endregion
+
+    //region Testing
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    //endregion
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+}
