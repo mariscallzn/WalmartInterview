@@ -20,12 +20,13 @@ class MainActivity : DaggerAppCompatActivity() {
         navigationView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.shopping -> {
-                    findNavController(R.id.nav_host_fragment).navigate(R.id.action_homeFragment_to_productsFragment)
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.to_products)
                     closeDrawer()
                     true
                 }
                 R.id.sourceCode -> {
-                    startActivity(Intent(this, WebViewActivity::class.java))
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.to_source_code)
+//                    startActivity(Intent(this, WebViewActivity::class.java))
                     true
                 }
                 R.id.webSite -> {

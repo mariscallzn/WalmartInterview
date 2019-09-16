@@ -5,6 +5,15 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
+<!--    Global Actions for the drawer-->
+    <action
+        android:id="@+id/to_products"
+        app:destination="@id/productsFragment"/>
+
+    <action
+        android:id="@+id/to_source_code"
+        app:destination="@id/webViewActivity"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.andymariscal.walmartproducts.ui.home.HomeFragment"

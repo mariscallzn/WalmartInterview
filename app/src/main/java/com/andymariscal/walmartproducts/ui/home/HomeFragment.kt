@@ -144,6 +144,9 @@ class HomeFragment : DaggerFragment() {
     private val feedbackHandler = object : FeedbackHandler {
         override fun onActionClicked() {
             //TODO launch app store
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.andymariscal.walmartproducts")).apply {
+                startActivity(this)
+            }
         }
     }
 

@@ -12,4 +12,8 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="Theme.Splash" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+    </style>
+
 </resources>

@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">WalmartProducts</string>
+    <string name="app_name">Walmart</string>
+    <string name="start_shopping">START SHOPPING</string>
+    <string name="no_membership_fee_millions_of_items">No membership fee. Millions of items.</string>
+    <string name="free_2_day_delivery">Free 2-day delivery</string>
+    <string name="what_do_you_think_about_the_app">What do you think about the app?</string>
+    <string name="tell_us">TELL US</string>
     <plurals name="reviews">
         <item quantity="one">&lt;u>%d review&lt;/u></item>
         <item quantity="few">&lt;u>%d reviews&lt;/u></item>

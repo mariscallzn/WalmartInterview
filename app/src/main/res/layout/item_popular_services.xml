@@ -34,14 +34,17 @@
         android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:text="Profile"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileIv" />
+        app:layout_constraintTop_toBottomOf="@+id/profileIv"
+        app:layout_constraintVertical_bias="0.19999999" />
     <!--    endregion-->
 
 
@@ -51,14 +54,17 @@
         android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:text="Source Code"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/sourceCodeIv" />
+        app:layout_constraintTop_toBottomOf="@+id/sourceCodeIv"
+        app:layout_constraintVertical_bias="0.19" />
 
     <ImageView
         android:id="@+id/sourceCodeIv"
@@ -78,14 +84,17 @@
         android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:text="Web Site"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/websiteIv" />
+        app:layout_constraintTop_toBottomOf="@+id/websiteIv"
+        app:layout_constraintVertical_bias="0.19" />
 
     <ImageView
         android:id="@+id/websiteIv"
@@ -114,14 +123,17 @@
         android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:text="Shopping"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/shoppingIv" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingIv"
+        app:layout_constraintVertical_bias="0.19" />
     <!--    endregion-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
